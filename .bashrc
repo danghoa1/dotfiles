@@ -121,8 +121,8 @@ if [[ `uname` == 'Darwin' ]]; then
   alias ls='ls -AFpG'
   alias ll='ls -l'
 
-  source ~/core/dotfiles/git-completion.bash
-  source ~/core/dotfiles/git-prompt.sh
+  source ~/dotfiles/git-completion.bash
+  source ~/dotfiles/git-prompt.sh
   export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 else
   source ~/dotfiles/git-completion.bash
