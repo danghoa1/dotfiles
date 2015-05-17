@@ -6,6 +6,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Bundle 'nikvdp/ejs-syntax'
 
 call vundle#end()
 filetype plugin indent on
@@ -17,6 +18,7 @@ filetype indent plugin on
 
 " indent plugin overrides global .py indent settings, we re-override them here.
 au FileType python setl sw=2 ts=2 sts=2
+au BufNewFile,BufRead *.html set filetype=ejs
 
 syntax on  " Enable syntax highlighting
 
@@ -32,6 +34,7 @@ set backspace=2  " Make sure backspace always works
 set cc=+1  " Highlight the first column after textwidth
 set cindent  " Get the amount of indent according the C indenting rules
 set cinkeys-=0#  " Treat # as a normal character when indenting
+set clipboard=unnamed " Allow copying and pasting using clipboard "
 set expandtab  " Always replace tabs with spaces
 set ff=unix  " Always use unix EOLs
 set gdefault  " All matches in a line are substituted instead of one
