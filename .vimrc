@@ -7,6 +7,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Bundle 'nikvdp/ejs-syntax'
+Plugin 'mxw/vim-jsx'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'raimondi/delimitmate'
 
 call vundle#end()
 filetype plugin indent on
@@ -89,6 +97,9 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme solarized
 
+" Set airline theme
+let g:airline_theme='simple'
+
 " Customize some colors
 highlight ColorColumn ctermbg=0
 au ColorScheme * highlight ColorColumn ctermbg=0
@@ -141,6 +152,9 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_max_height = 50
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_dotfiles = 0
+
+" vim-jsx: enable syntax highlighting even for non-jsx files
+let g:jsx_ext_required = 0
 
 " Enable filename completion with <comma>r
 map <Leader>r :CtrlP<CR>

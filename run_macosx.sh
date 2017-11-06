@@ -6,6 +6,7 @@ ln -s dotfiles/.solarized ~/
 ln -s dotfiles/.tmux.conf ~/
 ln -s dotfiles/.vim ~/
 ln -s dotfiles/.vimrc ~/
+ln -s dotfiles/.xvimrc ~/
 
 # Mac OS uses .profile instead of .bashrc
 ln -s dotfiles/.bashrc ~/.profile
