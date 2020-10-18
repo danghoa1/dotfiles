@@ -117,7 +117,6 @@ fi
 # Load git completion functionality
 if [[ `uname` == 'Darwin' ]]; then
   # Use MacVim in terminal mode instead of builtin Vim in order to get +conceal.
-  alias vim='mvim -v'
   alias ls='ls -AFpG'
   alias ll='ls -l'
 
@@ -255,3 +254,18 @@ alias gccrun="function gccrun() {
   /tmp/gccrun
 }"
 export PATH=$PATH:~/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias loadenv='export $(grep -v "^#" .env | xargs)'
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/phidang/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/phidang/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/phidang/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/phidang/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# Google Speech2Text
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/phidang/Work/BillieJean-4caf4607ee10.json"
